@@ -1,0 +1,61 @@
+/* Centrar todo el carrusel en la pantalla */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal del carrusel */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Contenedor del carrusel */
+.carousel-container {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Evita que la imagen se deforme */
+
+}
+
+/* Pista que contiene las imágenes */
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Imágenes dentro del carrusel */
+.carousel-track img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    object-fit: cover; /* Evita que la imagen se deforme */
+
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en botones */
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
