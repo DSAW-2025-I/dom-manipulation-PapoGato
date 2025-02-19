@@ -54,4 +54,4 @@ El objetivo de este taller es hacer que el carrusel que desarrolles se vea corre
 - [Guía de JavaScript](https://www.w3schools.com/js/)
 - [Guía de diseño web responsive](https://www.w3schools.com/html/html_responsive.asp)
 
-
+https://dsaw-2025-i.github.io/dom-manipulation-PapoGato/index.html
