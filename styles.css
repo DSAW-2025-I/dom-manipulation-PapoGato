@@ -1,0 +1,90 @@
+/* Centrar todo el carrusel en la pantalla */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal del carrusel */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Contenedor del carrusel */
+.carousel-container {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción */
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Pista que contiene las imágenes */
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+/* Imágenes dentro del carrusel */
+.carousel-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste para PC */
+    object-position: center;
+    display: block;
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en botones */
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividad para iPhone y pantallas pequeñas */
+@media (max-width: 600px) {
+    .carousel-wrapper {
+        flex-direction: column;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .carousel-container {
+        max-width: 95%;
+        max-height: 90vh; /* Ajusta la altura para evitar recortes */
+        aspect-ratio: auto; /* Permite ajustes dinámicos */
+    }
+
+    .carousel-track img {
+        object-fit: contain; /* Evita cortes en móviles */
+    }
+}
